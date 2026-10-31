@@ -2,7 +2,7 @@ pipeline {
   agent any
   options {\n    timestamps()\n    disableConcurrentBuilds()\n  }
   environment {
-    AWS_REGION = 'ap-south-1'
+    AWS_REGION = 'us-east-2'
     ECR_REPOSITORY = 'jenkins-ecr-demo'
     APP_INSTANCE_ID = 'REPLACE_WITH_APP_INSTANCE_ID'
     IMAGE_TAG = "${BUILD_NUMBER}"
