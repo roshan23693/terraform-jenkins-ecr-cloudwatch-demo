@@ -1,6 +1,6 @@
 variable "aws_region" {
   type    = string
-  default = "ap-south-1"
+  default = "us-east-2"
 }
 
 variable "project_name" {
@@ -10,7 +10,7 @@ variable "project_name" {
 
 variable "my_ip_cidr" {
   type        = string
-  description = "Your public IPv4 address with /32, for example 203.0.113.10/32."
+  description = "0.0.0.0/0"
 
   validation {
     condition     = can(cidrnetmask(var.my_ip_cidr))
